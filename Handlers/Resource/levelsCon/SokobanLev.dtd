@@ -1,0 +1,23 @@
+<!-- ================== SokobanLevels ====================================== -->
+<!ELEMENT SokobanLevels (Title, LevelCollection)>
+
+<!ELEMENT Title (#PCDATA)>
+
+
+<!ELEMENT LevelCollection (Level+)>
+<!ATTLIST LevelCollection
+                Copyright CDATA ""
+                MaxWidth     CDATA #IMPLIED
+                MaxHeight    CDATA #IMPLIED>
+
+<!ELEMENT Level (L+)>
+<!ATTLIST Level Id        CDATA #REQUIRED
+                Width     CDATA #IMPLIED
+                Height    CDATA #IMPLIED
+                Copyright CDATA "">
+
+<!ELEMENT L (#PCDATA)>
+<!ATTLIST L xml:space (default|preserve) 'preserve'>
+
+<!-- ======================================================================= -->
+

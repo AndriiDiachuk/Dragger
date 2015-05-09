@@ -18,7 +18,6 @@ namespace ConsoleUI
         public static LevelSet levelSet;
         public static Level level;
         public static ConsoleDrawing draw;
-        //ToDO: Menu without field
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;

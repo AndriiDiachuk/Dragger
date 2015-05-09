@@ -75,9 +75,6 @@
     <None Include="Resource\graphics\original\man.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resource\graphics\original\package_goal.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resource\graphics\original\space.bmp" />
   </ItemGroup>
   <ItemGroup>

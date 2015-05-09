@@ -58,12 +58,12 @@ namespace GameEngine
         #endregion
 
         #region Constructors
-        public LevelSet(string aTitle, string aDescription, int aNrOfLevels, string aFilename)
+        public LevelSet(string title, string description, int nrOfLevels, string filename)
         {
-            _title = aTitle;
-            _description = aDescription;
-            _nrOfLevelsInSet = aNrOfLevels;
-            _filename = aFilename;
+            _title = title;
+            _description = description;
+            _nrOfLevelsInSet = nrOfLevels;
+            _filename = filename;
         }
 
         public LevelSet() { }
@@ -87,7 +87,7 @@ namespace GameEngine
             _description = doc.SelectSingleNode("//Description").InnerText;
 
 
-            XmlNode levelCollection = doc.SelectSingleNode("//LevelCollection");
+            //XmlNode levelCollection = doc.SelectSingleNode("//LevelCollection");
             XmlNodeList levels = doc.SelectNodes("//Level");
             _nrOfLevelsInSet = levels.Count;
         }

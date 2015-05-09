@@ -12,39 +12,40 @@ namespace Handlers
     {
         // Console controls to display information on the screen
         #region Private fields
-        private Level level;
-        private string item;
-        private static string[,] Map;
+        private Level _level;
+        private string _item;
+        private static string[,] _map;
         #endregion
 
         #region Constructors
         public ConsoleDrawing(Level level)
         {
-            this.level = level;
+            this._level = level;
         }
         #endregion
 
         #region Draw
         public void DrawLevel()
         {
-            int levelWidth = (level.Width);
-            int levelHeight = (level.Height);
-            Map = new string[level.Height, level.Width];
-            //Draw the level
-            for (int i = 0; i < level.LevelMap.GetLength(0); i++)
+
+            int levelWidth = (_level.Width);
+            int levelHeight = (_level.Height);
+            _map = new string[_level.Height, _level.Width];
+
+            for (int i = 0; i < _level.LevelMap.GetLength(0); i++)
             {
-                for (int j = 0; j < level.LevelMap.GetLength(1); j++)
+                for (int j = 0; j < _level.LevelMap.GetLength(1); j++)
                 {
-                    string image = GetLevelImage(level.LevelMap[i, j], level.SokoDirection);
-                    Map[i, j] = image;
+                    string image = GetLevelImage(_level.LevelMap[i, j], _level.SokoDirection);
+                    _map[i, j] = image;
 
                     Console.Write(image);
                     
-                    if (level.LevelMap[i, j] == ItemType.Dragger ||
-                        level.LevelMap[i, j] == ItemType.DraggerOnGoal)
+                    if (_level.LevelMap[i, j] == ItemType.Dragger ||
+                        _level.LevelMap[i, j] == ItemType.DraggerOnGoal)
                     {
-                        level.SokoPosX = i;
-                        level.SokoPosY = j;
+                        _level.SokoPosX = i;
+                        _level.SokoPosY = j;
                     }
                 }
                 Console.WriteLine();
@@ -52,94 +53,86 @@ namespace Handlers
         }
         public string[,] DrawChanges()
         {
-            //TODO: забрати
-            string image1 = GetLevelImage(level.Item1.ItemType, level.SokoDirection);
-            //g.DrawImage(image1, Level.ItemSize + level.Item1.XPos * Level.ItemSize,
-            //    Level.ItemSize + level.Item1.YPos * Level.ItemSize, Level.ItemSize, Level.ItemSize);
-            Map[level.Item1.XPos, level.Item1.YPos] = image1;
 
-            string image2 = GetLevelImage(level.Item2.ItemType, level.SokoDirection);
-            //g.DrawImage(image2, Level.ItemSize + level.Item2.XPos * Level.ItemSize,
-            //   Level.ItemSize + level.Item2.YPos * Level.ItemSize, Level.ItemSize, Level.ItemSize);
-            Map[level.Item2.XPos, level.Item2.YPos] = image2;
-            //g.DrawImage();
+            string image1 = GetLevelImage(_level.Item1.ItemType, _level.SokoDirection);
+            _map[_level.Item1.XPos, _level.Item1.YPos] = image1;
 
+            string image2 = GetLevelImage(_level.Item2.ItemType, _level.SokoDirection);
+            _map[_level.Item2.XPos, _level.Item2.YPos] = image2;
 
-            if (level.Item3 != null)
+            if (_level.Item3 != null)
             {
-                string image3 = GetLevelImage(level.Item3.ItemType, level.SokoDirection);
-                // g.DrawImage(image3, Level.ItemSize + level.Item3.XPos * Level.ItemSize,
-                //Level.ItemSize + level.Item3.YPos * Level.ItemSize, Level.ItemSize, Level.ItemSize);
-                Map[level.Item3.XPos, level.Item3.YPos] = image3;
+                string image3 = GetLevelImage(_level.Item3.ItemType, _level.SokoDirection);
+                _map[_level.Item3.XPos, _level.Item3.YPos] = image3;
             }
 
-            return Map;
+            return _map;
         }
         public string GetLevelImage(ItemType itemType, MoveDirection direction)
         {
             if (itemType == ItemType.Wall)
             {
-                item = "#";
+                _item = "#";
             }
             else if (itemType == ItemType.Floor)
             {
-                item = " ";
+                _item = " ";
             }
             else if (itemType == ItemType.Package)
             {
-                item = "@";
+                _item = "@";
             }
             else if (itemType == ItemType.Goal)
             {
-                item = "X";
+                _item = "X";
             }
             else if (itemType == ItemType.Dragger)
             {
                 if (direction == MoveDirection.Up)
                 {
-                    item = "Y";
+                    _item = "Y";
                 }
                 else if (direction == MoveDirection.Down)
                 {
-                    item = "Y";
+                    _item = "Y";
                 }
                 else if (direction == MoveDirection.Right)
                 {
-                    item = "Y";
+                    _item = "Y";
                 }
                 else
                 {
-                    item = "Y";
+                    _item = "Y";
                 }
             }
             else if (itemType == ItemType.PackageOnGoal)
             {
-                item = "@";
+                _item = "@";
             }
             else if (itemType == ItemType.DraggerOnGoal)
             {
                 if (direction == MoveDirection.Up)
                 {
-                    item = "Y";
+                    _item = "Y";
                 }
                 else if (direction == MoveDirection.Down)
                 {
-                    item = "Y";
+                    _item = "Y";
                 }
                 else if (direction == MoveDirection.Right)
                 {
-                    item = "Y";
+                    _item = "Y";
                 }
                 else
                 {
-                    item = "Y";
+                    _item = "Y";
                 }
             }
             else
             {
-                item = " ";
+                _item = " ";
             }
-            return item;
+            return _item;
         }
         public void DrawMap(string[,] map)
         {
@@ -150,23 +143,23 @@ namespace Handlers
                 {
                     if (map[i, j] == "#")
                     {
-                        Console.Write("#");
+                        Console.Write(map[i, j]);
                     }
                     if (map[i, j] == "X")
                     {
-                        Console.Write("X");
+                        Console.Write(map[i, j]);
                     }
                     if (map[i, j] == "@")
                     {
-                        Console.Write("@");
+                        Console.Write(map[i, j]);
                     }
                     if (map[i, j] == " ")
                     {
-                        Console.Write(" ");
+                        Console.Write(map[i, j]);
                     }
                     if (map[i, j] == "Y")
                     {
-                        Console.Write("Y");
+                        Console.Write(map[i, j]);
                     }
                 }
                 Console.WriteLine();

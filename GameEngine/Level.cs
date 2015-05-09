@@ -18,8 +18,8 @@ namespace GameEngine
         private int _levelNr = 0;
         private int _width = 0;             
         private int _height = 0;               
-        private string _levelSetName = string.Empty;
-        private bool _isUndoable = false;
+        private string _levelSetName = string.Empty; 
+
         #endregion        
 
         #region Properties
@@ -43,20 +43,16 @@ namespace GameEngine
         public int Height
         {
             get { return _height; }
-        }        
-        public int Moves { get; set; }            
-        public int Pushes { get; set; }             
-        public int SokoPosX { get; set; }              
-        public int SokoPosY { get; set; }
+        }
         public string LevelSetName
         {
             get { return _levelSetName; }
         }
-        public bool IsUndoable
-        {
-            get { return _isUndoable; }
-            set { _isUndoable = value; }
-        }        
+        public int Moves { get; set; }            
+        public int Pushes { get; set; }             
+        public int SokoPosX { get; set; }              
+        public int SokoPosY { get; set; }
+        public bool IsUndoable { get; set; }
         public MoveDirection SokoDirection { get; private set; }
 
         // changedItems is updated every time Dragger moves or pushes a box.
@@ -78,17 +74,17 @@ namespace GameEngine
         #endregion
 
         #region Constructor
-        public Level(string aName, ItemType[,] aLevelMap, int aWidth,
-            int aHeight, int aNrOfGoals, int aLevelNr, string aLevelSetName)
+        public Level(string name, ItemType[,] levelMap, int width,
+            int height, int nrOfGoals, int levelNr, string levelSetName)
         {
 
-            _name = aName;
-            _width = aWidth;
-            _height = aHeight;
-            LevelMap = aLevelMap;
-            _nrOfGoals = aNrOfGoals;
-            _levelNr = aLevelNr;
-            _levelSetName = aLevelSetName;
+            _name = name;
+            _width = width;
+            _height = height;
+            LevelMap = levelMap;
+            _nrOfGoals = nrOfGoals;
+            _levelNr = levelNr;
+            _levelSetName = levelSetName;
             SokoDirection = MoveDirection.Right;
         }
         #endregion      
@@ -160,7 +156,7 @@ namespace GameEngine
                     Item2 = new Item(ItemType.DraggerOnGoal, SokoPosX, SokoPosY - 1);
                 }
 
-                _isUndoable = true;
+                IsUndoable = true;
                 UpdateCurrentDraggerPosition();
                 MovesBeforeUndo = Moves;
                 PushesBeforeUndo = Pushes;
@@ -221,7 +217,7 @@ namespace GameEngine
                     Item2 = new Item(ItemType.DraggerOnGoal, SokoPosX, SokoPosY + 1);
                 }
 
-                _isUndoable = true;
+                IsUndoable = true;
                 UpdateCurrentDraggerPosition();
                 MovesBeforeUndo = Moves;
                 PushesBeforeUndo = Pushes;
@@ -281,7 +277,7 @@ namespace GameEngine
                     Item2 = new Item(ItemType.DraggerOnGoal, SokoPosX + 1, SokoPosY);
                 }
 
-                _isUndoable = true;
+                IsUndoable = true;
                 UpdateCurrentDraggerPosition();
                 MovesBeforeUndo = Moves;
                 PushesBeforeUndo = Pushes;
@@ -341,7 +337,7 @@ namespace GameEngine
                     Item2 = new Item(ItemType.DraggerOnGoal, SokoPosX - 1, SokoPosY);
                 }
 
-                _isUndoable = true;
+                IsUndoable = true;
                 UpdateCurrentDraggerPosition();
                 MovesBeforeUndo = Moves;
                 PushesBeforeUndo = Pushes;
