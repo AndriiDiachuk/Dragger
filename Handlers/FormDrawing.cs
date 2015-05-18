@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 using GameEngine;
 using GameEngine.Enums;
 
@@ -28,8 +23,8 @@ namespace Handlers
         #region DRAW
         public Image DrawLevel()
         {
-            int levelWidth = (_level.Width + 2) * Level.ItemSize;
-            int levelHeight = (_level.Height + 2) * Level.ItemSize;
+            int levelWidth = (_level.Width + 2) * Level.ITEM_SIZE;
+            int levelHeight = (_level.Height + 2) * Level.ITEM_SIZE;
 
             _img = new Bitmap(levelWidth, levelHeight);
 
@@ -41,20 +36,20 @@ namespace Handlers
             // Draw the border around the level
             for (int i = 0; i < _level.Width + 2; i++)
             {
-                _g.DrawImage(ImgSpace, Level.ItemSize * i, 0,
-                    Level.ItemSize, Level.ItemSize);
-                _g.DrawImage(ImgSpace, Level.ItemSize * i,
-                    (_level.Height + 1) * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+                _g.DrawImage(ImgSpace, Level.ITEM_SIZE * i, 0,
+                    Level.ITEM_SIZE, Level.ITEM_SIZE);
+                _g.DrawImage(ImgSpace, Level.ITEM_SIZE * i,
+                    (_level.Height + 1) * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
             }
             for (int i = 1; i < _level.Height + 1; i++)
             { 
-                _g.DrawImage(ImgSpace, 0, Level.ItemSize * i,
-                    Level.ItemSize, Level.ItemSize);
+                _g.DrawImage(ImgSpace, 0, Level.ITEM_SIZE * i,
+                    Level.ITEM_SIZE, Level.ITEM_SIZE);
             }
-            for (int i = 1; i < Level.ItemSize + 1; i++)
+            for (int i = 1; i < Level.ITEM_SIZE + 1; i++)
             { 
-                _g.DrawImage(ImgSpace, (_level.Width + 1) * Level.ItemSize,
-                    Level.ItemSize * i, Level.ItemSize, Level.ItemSize);
+                _g.DrawImage(ImgSpace, (_level.Width + 1) * Level.ITEM_SIZE,
+                    Level.ITEM_SIZE * i, Level.ITEM_SIZE, Level.ITEM_SIZE);
             }
 
             // Draw the level
@@ -64,8 +59,8 @@ namespace Handlers
                 {
                     Image image = GetLevelImage(_level.LevelMap[i, j], _level.SokoDirection);
 
-                    _g.DrawImage(image, Level.ItemSize + i * Level.ItemSize,
-                        Level.ItemSize + j * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+                    _g.DrawImage(image, Level.ITEM_SIZE + i * Level.ITEM_SIZE,
+                        Level.ITEM_SIZE + j * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
 
                     // Set Dragger's position
                     if (_level.LevelMap[i, j] == ItemType.Dragger ||
@@ -81,20 +76,20 @@ namespace Handlers
         public Image DrawChanges()
         {
             Image image1 = GetLevelImage(_level.Item1.ItemType, _level.SokoDirection);
-            _g.DrawImage(image1, Level.ItemSize + _level.Item1.XPos * Level.ItemSize,
-                Level.ItemSize + _level.Item1.YPos * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+            _g.DrawImage(image1, Level.ITEM_SIZE + _level.Item1.XPos * Level.ITEM_SIZE,
+                Level.ITEM_SIZE + _level.Item1.YPos * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
 
             Image image2 = GetLevelImage(_level.Item2.ItemType, _level.SokoDirection);
-            _g.DrawImage(image2, Level.ItemSize + _level.Item2.XPos * Level.ItemSize,
-               Level.ItemSize + _level.Item2.YPos * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+            _g.DrawImage(image2, Level.ITEM_SIZE + _level.Item2.XPos * Level.ITEM_SIZE,
+               Level.ITEM_SIZE + _level.Item2.YPos * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
             //g.DrawImage();
 
 
             if (_level.Item3 != null)
             {
                 Image image3 = GetLevelImage(_level.Item3.ItemType, _level.SokoDirection);
-                _g.DrawImage(image3, Level.ItemSize + _level.Item3.XPos * Level.ItemSize,
-               Level.ItemSize + _level.Item3.YPos * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+                _g.DrawImage(image3, Level.ITEM_SIZE + _level.Item3.XPos * Level.ITEM_SIZE,
+               Level.ITEM_SIZE + _level.Item3.YPos * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
             }
 
             return _img;
@@ -145,18 +140,18 @@ namespace Handlers
             // item1U, item2U and item3U contains the ItemTypes and their
             // positions at the time of just before the last push.
             Image image1 = GetLevelImage(_level.Item1U.ItemType, _level.SokoDirection);
-            _g.DrawImage(image1, Level.ItemSize + _level.Item1U.XPos * Level.ItemSize,
-                Level.ItemSize + _level.Item1U.YPos * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+            _g.DrawImage(image1, Level.ITEM_SIZE + _level.Item1U.XPos * Level.ITEM_SIZE,
+                Level.ITEM_SIZE + _level.Item1U.YPos * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
             _level.LevelMap[_level.Item1U.XPos, _level.Item1U.YPos] = _level.Item1U.ItemType;
 
             Image image2 = GetLevelImage(_level.Item2U.ItemType, _level.SokoDirection);
-            _g.DrawImage(image2, Level.ItemSize + _level.Item2U.XPos * Level.ItemSize,
-                Level.ItemSize + _level.Item2U.YPos * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+            _g.DrawImage(image2, Level.ITEM_SIZE + _level.Item2U.XPos * Level.ITEM_SIZE,
+                Level.ITEM_SIZE + _level.Item2U.YPos * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
             _level.LevelMap[_level.Item2U.XPos, _level.Item2U.YPos] = _level.Item2U.ItemType;
 
             Image image3 = GetLevelImage(_level.Item3U.ItemType, _level.SokoDirection);
-            _g.DrawImage(image3, Level.ItemSize + _level.Item3U.XPos * Level.ItemSize,
-                Level.ItemSize + _level.Item3U.YPos * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+            _g.DrawImage(image3, Level.ITEM_SIZE + _level.Item3U.XPos * Level.ITEM_SIZE,
+                Level.ITEM_SIZE + _level.Item3U.YPos * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
             _level.LevelMap[_level.Item3U.XPos, _level.Item3U.YPos] = _level.Item3U.ItemType;
 
             // Here we remove Dragger from his current position and replace it
@@ -167,18 +162,17 @@ namespace Handlers
             {
                 if (_level.LevelMap[_level.SokoPosX, _level.SokoPosY] == ItemType.Dragger)
                 {
-                    //TODO: винести в функціію
                     _level.LevelMap[_level.SokoPosX, _level.SokoPosY] = ItemType.Floor;
                     _g.DrawImage(GetLevelImage(ItemType.Floor, MoveDirection.Up),
-                        Level.ItemSize + _level.SokoPosX * Level.ItemSize, Level.ItemSize +
-                        _level.SokoPosY * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+                        Level.ITEM_SIZE + _level.SokoPosX * Level.ITEM_SIZE, Level.ITEM_SIZE +
+                        _level.SokoPosY * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
                 }
                 else if (_level.LevelMap[_level.SokoPosX, _level.SokoPosY] == ItemType.DraggerOnGoal)
                 {
                     _level.LevelMap[_level.SokoPosX, _level.SokoPosY] = ItemType.Goal;
                     _g.DrawImage(GetLevelImage(ItemType.Goal, MoveDirection.Up),
-                        Level.ItemSize + _level.SokoPosX * Level.ItemSize, Level.ItemSize +
-                        _level.SokoPosY * Level.ItemSize, Level.ItemSize, Level.ItemSize);
+                        Level.ITEM_SIZE + _level.SokoPosX * Level.ITEM_SIZE, Level.ITEM_SIZE +
+                        _level.SokoPosY * Level.ITEM_SIZE, Level.ITEM_SIZE, Level.ITEM_SIZE);
                 }
             }
 
@@ -202,14 +196,14 @@ namespace Handlers
         public Image ImgPackage { get { return Handlers.Properties.Resources.package; } }
         public Image ImgPackageGoal { get { return Handlers.Properties.Resources.package_goal; } }
         public Image ImgGoal { get { return Handlers.Properties.Resources.goal; } }
-        public Image ImgSokoUp { get { return Handlers.Properties.Resources.man; } }
-        public Image ImgSokoDown { get { return Handlers.Properties.Resources.man; } }
-        public Image ImgSokoRight { get { return Handlers.Properties.Resources.man; } }
-        public Image ImgSokoLeft { get { return Handlers.Properties.Resources.man; } }
-        public Image ImgSokoUpGoal { get { return Handlers.Properties.Resources.man; } }
-        public Image ImgSokoDownGoal { get { return Handlers.Properties.Resources.man; } }
-        public Image ImgSokoRightGoal { get { return Handlers.Properties.Resources.man; } }
-        public Image ImgSokoLeftGoal { get { return Handlers.Properties.Resources.man; } }
+        public Image ImgSokoUp { get { return Handlers.Properties.Resources.soko_up; } }
+        public Image ImgSokoDown { get { return Handlers.Properties.Resources.soko_down; } }
+        public Image ImgSokoRight { get { return Handlers.Properties.Resources.soko_right; } }
+        public Image ImgSokoLeft { get { return Handlers.Properties.Resources.soko_left; } }
+        public Image ImgSokoUpGoal { get { return Handlers.Properties.Resources.soko_goal_up; } }
+        public Image ImgSokoDownGoal { get { return Handlers.Properties.Resources.soko_goal_down; } }
+        public Image ImgSokoRightGoal { get { return Handlers.Properties.Resources.soko_goal_right; } }
+        public Image ImgSokoLeftGoal { get { return Handlers.Properties.Resources.soko_goal_left; } }
         public Image ImgSpace { get { return Handlers.Properties.Resources.space; } }
         #endregion
     }

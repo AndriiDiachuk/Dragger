@@ -1,0 +1,9 @@
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\bin\Release\Handlers.dll
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\bin\Release\Handlers.pdb
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\bin\Release\GameEngine.dll
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\bin\Release\GameEngine.pdb
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\obj\Release\Drager.Handlers.csprojResolveAssemblyReference.cache
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\obj\Release\Handlers.Properties.Resources.resources
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\obj\Release\Drager.Handlers.csproj.GenerateResource.Cache
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\obj\Release\Handlers.dll
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\obj\Release\Handlers.pdb

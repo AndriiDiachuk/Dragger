@@ -10,7 +10,7 @@ namespace Handlers
 {
     public class ConsoleDrawing
     {
-        // Console controls to display information on the screen
+
         #region Private fields
         private Level _level;
         private string _item;

@@ -19,8 +19,6 @@ $RECYCLE.BIN/
 
 #Other
 *.exe
-bin
-obj
 TestResults
 DraggerModel
 *.suo

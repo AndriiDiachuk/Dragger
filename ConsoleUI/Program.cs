@@ -1,13 +1,8 @@
-﻿using DesktopUI;
-using GameEngine;
+﻿using GameEngine;
 using System.IO;
 using GameEngine.Enums;
 using Handlers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Reflection;
 
 namespace ConsoleUI
@@ -87,7 +82,6 @@ namespace ConsoleUI
         private static void StartLevel(bool redraw)
         {
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\levels\boxworld.xml";
-
             levelSet = new LevelSet();            
             levelSet.SetLevelSet(path);
             levelSet.CurrentLevel = 1;

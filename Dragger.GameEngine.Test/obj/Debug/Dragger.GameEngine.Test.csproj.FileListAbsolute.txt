@@ -1,0 +1,14 @@
+C:\Users\Andriy\Desktop\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\bin\Debug\Dragger.GameEngine.Test.dll
+C:\Users\Andriy\Desktop\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\bin\Debug\Dragger.GameEngine.Test.pdb
+C:\Users\Andriy\Desktop\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\bin\Debug\GameEngine.dll
+C:\Users\Andriy\Desktop\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\bin\Debug\GameEngine.pdb
+C:\Users\Andriy\Desktop\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\obj\Debug\Dragger.GameEngine.Test.csprojResolveAssemblyReference.cache
+C:\Users\Andriy\Desktop\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\obj\Debug\Dragger.GameEngine.Test.dll
+C:\Users\Andriy\Desktop\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\obj\Debug\Dragger.GameEngine.Test.pdb
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\bin\Debug\Dragger.GameEngine.Test.dll
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\bin\Debug\Dragger.GameEngine.Test.pdb
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\bin\Debug\GameEngine.dll
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\bin\Debug\GameEngine.pdb
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\obj\Debug\Dragger.GameEngine.Test.csprojResolveAssemblyReference.cache
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\obj\Debug\Dragger.GameEngine.Test.dll
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Dragger.GameEngine.Test\obj\Debug\Dragger.GameEngine.Test.pdb

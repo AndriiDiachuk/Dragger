@@ -1,13 +1,10 @@
-﻿using GameEngine.Enums;
-using System;
+﻿using System;
+using GameEngine.Enums;
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
+using System.Collections.Generic;
 
 namespace GameEngine
 {
@@ -23,7 +20,6 @@ namespace GameEngine
         private string _description = string.Empty;
         private string _filename = string.Empty;
 
-        private int _currentLevel = 0;
         private int _nrOfLevelsInSet = 0;
         #endregion
 
@@ -49,24 +45,24 @@ namespace GameEngine
             get { return _nrOfLevelsInSet; }
         }
 
-        public int CurrentLevel
-        {
-            get { return _currentLevel; }
-            set { _currentLevel = value; }
-        }
+        public int CurrentLevel { get; set; }
 
         #endregion
 
         #region Constructors
         public LevelSet(string title, string description, int nrOfLevels, string filename)
         {
+            CurrentLevel = 0;
             _title = title;
             _description = description;
             _nrOfLevelsInSet = nrOfLevels;
             _filename = filename;
         }
 
-        public LevelSet() { }
+        public LevelSet()
+        {
+            CurrentLevel = 0;
+        }
 
         // Indexer for the LevelSet object
         public Level this[int index]
@@ -86,8 +82,6 @@ namespace GameEngine
             _title = doc.SelectSingleNode("//Title").InnerText;
             _description = doc.SelectSingleNode("//Description").InnerText;
 
-
-            //XmlNode levelCollection = doc.SelectSingleNode("//LevelCollection");
             XmlNodeList levels = doc.SelectNodes("//Level");
             _nrOfLevelsInSet = levels.Count;
         }
@@ -179,16 +173,13 @@ namespace GameEngine
             _levels.Add(new Level(levelName, levelMap, levelWidth,
                 levelHeight, nrOfGoals, levelNr, _title));
         }
-
         public static ArrayList GetAllLevelSetInfos()
         {
             ArrayList levelSets = new ArrayList();
 
-            // Read current path and remove the 'file:/' from the string
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly()
                 .GetName().CodeBase).Substring(6);
 
-            // Read all files from the levels directory
             string[] fileEntries = Directory.GetFiles(path + "/levels");
 
             // Read the level info from the files with an .xml extension

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -11,7 +10,7 @@ using GameEngine.Enums;
 
 namespace DesktopUI
 {
-    // This class draws everything on screen. It also handles user input.
+    // This class draws everything on screen.
     public class Board : System.Windows.Forms.Form
     {
         #region Private Fields
@@ -32,6 +31,7 @@ namespace DesktopUI
         private GroupBox grpMoves;
         private Label lblLevelNr;
         private Image img;
+        private Sound _sound = new Sound();
         #endregion
 
         #region Constructor
@@ -68,8 +68,8 @@ namespace DesktopUI
         // itself.we set the labels to display the level info.
         private void DrawLevel()
         {
-            int levelWidth = (level.Width + 2) * Level.ItemSize;
-            int levelHeight = (level.Height + 2) * Level.ItemSize;
+            int levelWidth = (level.Width + 2) * Level.ITEM_SIZE;
+            int levelHeight = (level.Height + 2) * Level.ITEM_SIZE;
 
             this.ClientSize = new Size(levelWidth + 150, levelHeight);
             screen.Size = new System.Drawing.Size(levelWidth, levelHeight);
@@ -114,7 +114,7 @@ namespace DesktopUI
                 lblPushes.Text = level.Pushes.ToString();
             }
         }
-#endregion
+        #endregion
 
         #region Drager movement
         // Reads input from the keyboard and does something depending on what
@@ -127,18 +127,32 @@ namespace DesktopUI
             {
                 case "Up":
                     MoveDragger(MoveDirection.Up);
+                    _sound.PlayMoveSound();
                     break;
                 case "Down":
                     MoveDragger(MoveDirection.Down);
+                    _sound.PlayMoveSound();
                     break;
                 case "Right":
                     MoveDragger(MoveDirection.Right);
+                    _sound.PlayMoveSound();
                     break;
                 case "Left":
                     MoveDragger(MoveDirection.Left);
+                    _sound.PlayMoveSound();
                     break;
                 case "U":
                     DrawUndo();
+                    _sound.PlayUndoSound();
+                    break;
+                case "M":
+                    _sound.IsSoundOn = false;
+                    break;
+                case "N":
+                    _sound.IsSoundOn = true;
+                    break;
+                case "R":
+                    InitializeGame();
                     break;
             }
         }
@@ -156,13 +170,11 @@ namespace DesktopUI
             // Draw the changes of the level
             DrawChanges();
 
-            //TODO: If the level is finished we save the number of moves and pushes
-            // and the last finished level to the savegame.
             if (level.IsFinished())
             {
                 //levelSet.LastFinishedLevel = levelSet.CurrentLevel;
                 MessageBox.Show("You did it in  moves " + level.Moves.ToString() + " and " + level.Pushes.ToString() +  " pushes " );
-
+                _sound.PlayDoneSound();
                 if (levelSet.CurrentLevel < levelSet.NrOfLevelsInSet)
                 {
 
@@ -193,6 +205,7 @@ namespace DesktopUI
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Board));
             this.lblPushes = new System.Windows.Forms.Label();
             this.lblMoves = new System.Windows.Forms.Label();
             this.lblMvs = new System.Windows.Forms.Label();
@@ -248,7 +261,7 @@ namespace DesktopUI
             this.grpMoves.Controls.Add(this.lblPushes);
             this.grpMoves.Location = new System.Drawing.Point(40, 56);
             this.grpMoves.Name = "grpMoves";
-            this.grpMoves.Size = new System.Drawing.Size(120, 64);
+            this.grpMoves.Size = new System.Drawing.Size(120, 76);
             this.grpMoves.TabIndex = 4;
             this.grpMoves.TabStop = false;
             // 
@@ -270,6 +283,8 @@ namespace DesktopUI
             this.Controls.Add(this.grpMoves);
             this.Controls.Add(this.lblLevelNr);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Board";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Drager";
@@ -293,5 +308,6 @@ namespace DesktopUI
         }
 
         #endregion
+
     }
 }

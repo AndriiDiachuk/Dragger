@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE SokobanLevels SYSTEM "DragerLev.dtd">
+<SokobanLevels>
+  <Title>Levels 1-5  - Easy</Title>
+  <Description>The levels from the Drager game</Description>
+  <LevelCollection MaxWidth="13" MaxHeight="11">
+    <Level Id="BW1" Width="10" Height="7">
+      <L> #######</L>
+      <L> #     ###</L>
+      <L>##$###   #</L>
+      <L># @ $  $ #</L>
+      <L># ..# $ ##</L>
+      <L>##..#   #</L>
+      <L> ########</L>
+    </Level>
+<Level Id="BW2" Width="8" Height="7">
+      <L>  ######</L>
+      <L>  #    #</L>
+      <L>###$$$ #</L>
+      <L>#@ $.. #</L>
+      <L># $...##</L>
+      <L>####  #</L>
+      <L>   ####</L>
+    </Level>
+    <Level Id="BW3" Width="12" Height="6">
+      <L> ####==#####</L>
+      <L>##  #==#   #</L>
+      <L># $ ####$  #</L>
+      <L>#  $.... $ #</L>
+      <L>##    # @ ##</L>
+      <L> ##########</L>
+    </Level>
+    <Level Id="BW4" Width="8" Height="7">
+      <L>  #####</L>
+      <L>###  @#</L>
+      <L>#  $. ##</L>
+      <L>#  .$. #</L>
+      <L>### *$ #</L>
+      <L>  #   ##</L>
+      <L>  #####</L>
+    </Level>
+    <Level Id="BW5" Width="8" Height="8">
+      <L>  ####</L>
+      <L>  #..#</L>
+      <L> ## .##</L>
+      <L> #  $.#</L>
+      <L>## $  ##</L>
+      <L>#  #$$ #</L>
+      <L>#  @   #</L>
+      <L>########</L>
+    </Level>
+  </LevelCollection>
+</SokobanLevels>

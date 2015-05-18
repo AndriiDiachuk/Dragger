@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
-using GameEngine.Enums;
+﻿using GameEngine.Enums;
 
 namespace GameEngine
 {
     public class Level
     {
         #region Private fields
-        public const int ItemSize = 40;// ITEM_SIZE is the size of an item in the level
+        public const int ITEM_SIZE = 40;// ITEM_SIZE is the size of an item in the level
 
         private string _name = string.Empty;
         private int _nrOfGoals = 0;          

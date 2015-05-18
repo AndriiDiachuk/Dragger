@@ -63,22 +63,22 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resource\graphics\original\ball2.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\graphics\original\floor.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\graphics\original\goal.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\graphics\original\man.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\graphics\original\space.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resource\graphics\original\wall.gif" />
+    <None Include="Resource\graphics\original\space.bmp" />
+    <None Include="Resource\graphics\original\goal.bmp" />
+    <None Include="Resource\graphics\original\floor.bmp" />
+    <Content Include="Resource\graphics\original\package.bmp" />
+    <Content Include="Resource\graphics\original\package_goal.bmp" />
+    <Content Include="Resource\graphics\original\soko_down.bmp" />
+    <Content Include="Resource\graphics\original\soko_goal_down.bmp" />
+    <Content Include="Resource\graphics\original\soko_goal_left.bmp" />
+    <Content Include="Resource\graphics\original\soko_goal_right.bmp" />
+    <Content Include="Resource\graphics\original\soko_goal_up.bmp" />
+    <Content Include="Resource\graphics\original\soko_left.bmp" />
+    <Content Include="Resource\graphics\original\soko_right.bmp" />
+    <Content Include="Resource\graphics\original\soko_up.bmp" />
+    <Content Include="Resource\graphics\original\wall.bmp" />
+    <Content Include="Resource\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

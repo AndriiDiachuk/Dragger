@@ -1,0 +1,15 @@
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\bin\Release\DesktopUI.exe.config
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\bin\Release\DesktopUI.exe
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\bin\Release\DesktopUI.pdb
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\bin\Release\GameEngine.dll
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\bin\Release\Handlers.dll
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\bin\Release\GameEngine.pdb
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\bin\Release\Handlers.pdb
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\obj\Release\Drager.DesktopUI.csprojResolveAssemblyReference.cache
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\obj\Release\DesktopUI.Board.resources
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\obj\Release\DesktopUI.FormLevels.resources
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\obj\Release\DesktopUI.Properties.Resources.resources
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\obj\Release\DesktopUI.RulesForm.resources
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\obj\Release\Drager.DesktopUI.csproj.GenerateResource.Cache
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\obj\Release\DesktopUI.exe
+C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\DesktopUI\obj\Release\DesktopUI.pdb
