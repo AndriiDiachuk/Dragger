@@ -11,3 +11,10 @@ C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\GameEngine\obj\Debu
 C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\GameEngine\bin\Debug\GameEngine.dll
 C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\GameEngine\bin\Debug\GameEngine.pdb
 C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\GameEngine\obj\Debug\GameEngine.pdb
+C:\Users\Andriy\Documents\DRAGGER\Dragger\GameEngine\bin\Debug\GameEngine.dll
+C:\Users\Andriy\Documents\DRAGGER\Dragger\GameEngine\bin\Debug\GameEngine.pdb
+C:\Users\Andriy\Documents\DRAGGER\Dragger\GameEngine\obj\Debug\Drager.GameEngine.csprojResolveAssemblyReference.cache
+C:\Users\Andriy\Documents\DRAGGER\Dragger\GameEngine\obj\Debug\Drager.GameEngine.Properties.Resources.resources
+C:\Users\Andriy\Documents\DRAGGER\Dragger\GameEngine\obj\Debug\Drager.GameEngine.csproj.GenerateResource.Cache
+C:\Users\Andriy\Documents\DRAGGER\Dragger\GameEngine\obj\Debug\GameEngine.dll
+C:\Users\Andriy\Documents\DRAGGER\Dragger\GameEngine\obj\Debug\GameEngine.pdb

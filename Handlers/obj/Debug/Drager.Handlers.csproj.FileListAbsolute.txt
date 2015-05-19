@@ -16,3 +16,12 @@ C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\obj\Debug\
 C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\obj\Debug\Drager.Handlers.csproj.GenerateResource.Cache
 C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\obj\Debug\Handlers.dll
 C:\Users\Andriy\Desktop\Drag\Dragger-masteras\Dragger-master\Handlers\obj\Debug\Handlers.pdb
+C:\Users\Andriy\Documents\DRAGGER\Dragger\Handlers\bin\Debug\Handlers.dll
+C:\Users\Andriy\Documents\DRAGGER\Dragger\Handlers\bin\Debug\Handlers.pdb
+C:\Users\Andriy\Documents\DRAGGER\Dragger\Handlers\bin\Debug\GameEngine.dll
+C:\Users\Andriy\Documents\DRAGGER\Dragger\Handlers\bin\Debug\GameEngine.pdb
+C:\Users\Andriy\Documents\DRAGGER\Dragger\Handlers\obj\Debug\Drager.Handlers.csprojResolveAssemblyReference.cache
+C:\Users\Andriy\Documents\DRAGGER\Dragger\Handlers\obj\Debug\Handlers.Properties.Resources.resources
+C:\Users\Andriy\Documents\DRAGGER\Dragger\Handlers\obj\Debug\Drager.Handlers.csproj.GenerateResource.Cache
+C:\Users\Andriy\Documents\DRAGGER\Dragger\Handlers\obj\Debug\Handlers.dll
+C:\Users\Andriy\Documents\DRAGGER\Dragger\Handlers\obj\Debug\Handlers.pdb

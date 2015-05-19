@@ -8,8 +8,6 @@ using System.Collections.Generic;
 
 namespace GameEngine
 {
-    // LevelSet contains information about the level set we can play. This
-    // level set information is stored in an XML file.
     public class LevelSet
     {
         #region Private fields
@@ -64,7 +62,6 @@ namespace GameEngine
             CurrentLevel = 0;
         }
 
-        // Indexer for the LevelSet object
         public Level this[int index]
         {
             get { return (Level)_levels[index]; }
@@ -74,7 +71,6 @@ namespace GameEngine
         #region Methods
         public void SetLevelSet(string setName)
         {
-            // Load XML into memory
             XmlDocument doc = new XmlDocument();
             doc.Load(setName);
 
@@ -85,13 +81,11 @@ namespace GameEngine
             XmlNodeList levels = doc.SelectNodes("//Level");
             _nrOfLevelsInSet = levels.Count;
         }
-
         public void SetLevelsInLevelSet(string setName)
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(setName);
 
-            // Get all Level elements from the level set
             XmlNodeList levelInfoList = doc.SelectNodes("//Level");
 
             int levelNr = 1;
@@ -101,7 +95,6 @@ namespace GameEngine
                 levelNr++;
             }
         }
-
         private void LoadLevel(XmlNode levelInfo, int levelNr)
         {
             // Read the attributes from the level element            
@@ -175,14 +168,18 @@ namespace GameEngine
         }
         public static ArrayList GetAllLevelSetInfos()
         {
-            ArrayList levelSets = new ArrayList();
+            ArrayList levelSets = new ArrayList();                                    
+            
+            File.WriteAllText("map1.xml", Drager.GameEngine.Properties.Resources.boxworld);
+            File.WriteAllText("map2.xml", Drager.GameEngine.Properties.Resources.boxworld1);
+            File.WriteAllText("DragerLev.dtd", Drager.GameEngine.Properties.Resources.DragerLev);
+
 
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly()
                 .GetName().CodeBase).Substring(6);
 
-            string[] fileEntries = Directory.GetFiles(path + "/levels");
+            string[] fileEntries = Directory.GetFiles(path);
 
-            // Read the level info from the files with an .xml extension
             foreach (string filename in fileEntries)
             {
                 FileInfo fileInfo = new FileInfo(filename);
